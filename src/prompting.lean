@@ -1,4 +1,3 @@
-
 meta def few_shot_prompt : string :=
 "/-- If $z_1, \\dots, z_n$ are complex, 
   then $|z_1 + z_2 + \\dots + z_n|\\leq |z_1| + |z_2| + \\dots + |z_n|$. -/
@@ -18,7 +17,7 @@ theorem distinct_powers_of_infinite_order_element (G : Type*) [group G] (x : G)
 /-- Let $X$ be a topological space; let $A$ be a subset of $X$. Suppose that for each $x\\in A$
   there is an open set $U$ containing $x$ such that $U\\subset A$. Show that $A$ is open in $X$. -/
 theorem subset_of_open_subset_is_open (X : Type*) [topological_space X] 
-  (A : set X) (hA : ∀ x ∈ A, ∃ U : set X, is_open U ∧ x ∈ U ∧ U ⊆ A): 
+  (A : set X) (hA : ∀ x ∈ A, ∃ U : set X, is_open U ∧ x ∈ U ∧ U ⊆ A) : 
   is_open A := sorry"
 
 meta def prompt_of_nl_statement (nl few_shot_prompt : string):= 
